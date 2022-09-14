@@ -34,8 +34,11 @@ import MyFriendsPending from './views/MyFriendsPending';
 import UserFriendsPage from './views/UserFriendsPage';
 
 // * belt review
-import Vinyls from './views/Vinyls'
-import VinylForm from './views/VinylForm';
+// import Vinyls from './views/Vinyls'
+// import VinylForm from './views/VinylForm';
+import Pirates from './views/Pirates';
+import PirateForm from './views/PirateForm';
+import Pirate from './views/Pirate';
 // import axios from 'axios';
 // import { useEffect } from 'react';
 
@@ -90,7 +93,7 @@ function App() {
           <Route element={<Users/>} path="/users"/>
           <Route element={<UserPage/>} path="/users/:id"/>
           <Route element={<UserFriendsPage/>} path="/users/friends/:id"/>
- 
+
           {/* // * My User Route */}
           <Route element={<MyUserAccount/>} path="/users/account"/>
           <Route element={<MyFriends/>} path="/users/friends"/>
@@ -111,8 +114,11 @@ function App() {
 
 
           {/* // * belt exams routes */}
-          <Route element={<Vinyls/>} path="/albums" />
-          <Route element={<VinylForm/>} path="/albums/new" />
+          {/* <Route element={<Vinyls/>} path="/albums" />
+          <Route element={<VinylForm/>} path="/albums/new" /> */}
+          <Route element={<Pirates/>} path="/pirates" />
+          <Route element={<PirateForm/>} path="/pirates/new" />
+          <Route element={<Pirate/>} path="/pirates/:id" />
 
           
         </Routes>

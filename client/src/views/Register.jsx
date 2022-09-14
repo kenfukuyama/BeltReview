@@ -48,7 +48,7 @@ const Register = () => {
                 loggedinUsername : res.data.user.username,
                 loadingUser : false
             })
-            navigate('/');
+            navigate('/pirates');
 
         })
         .catch(err => {
@@ -71,7 +71,7 @@ const Register = () => {
 
     return (
         <div className="container g-5 d-flex vh-100 w-md-60 w-lg-40 justify-content-center flex-column fade-in">
-            <h6 className="display-6 styled-heading pt-5">Join BruinNetwork</h6>
+            <h6 className="display-6 styled-heading pt-5">Explore the Wolrd</h6>
             <form className="styled-text mt-2 mb-2" onSubmit={createUser} >
                 <div className="mb-3">
                     <input

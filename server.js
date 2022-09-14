@@ -36,6 +36,7 @@ require('./server/routes/user.routes')(app);
 require('./server/routes/chitchat.routes')(app); 
 require('./server/routes/friendship.routes')(app); 
 require('./server/routes/vinyl.routes')(app); 
+require('./server/routes/pirate.routes')(app); 
 
 
 

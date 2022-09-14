@@ -8,7 +8,7 @@ const Main = () => {
     return (
         <div className="container">
             <div className="d-flex vh-100 align-items-center justify-content-center flex-column fade-in">
-                <h3 className="display-3 styled-heading">BruinNetwork</h3>
+                <h3 className="display-3 styled-heading">Pirates of the Caribbean</h3>
                 {/* <p className="lead styled-text" style={{fontFamily : "Courier New, monospace"}}>Meet and Connect with Bruins</p>
 
                 <div className="d-flex gap-2">
@@ -17,7 +17,7 @@ const Main = () => {
                 </div> */}
 
                 <div className="d-flex gap-2">
-                    <Link className="btn btn-light btn-lg mt-2" to={"/albums"}><strong>Vinyls</strong> <i className="bi-arrow-right-short"></i></Link>
+                    <Link className="btn btn-light btn-lg mt-2" to={"/pirates"}><strong>Explore Pirates</strong> <i className="bi-arrow-right-short"></i></Link>
                 </div>
 
                 {/* <div className="d-flex gap-2">

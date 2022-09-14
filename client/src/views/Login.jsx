@@ -42,7 +42,7 @@ const Login = (props) => {
                 loggedinUsername : res.data.user.username,
                 loadingUser : false
             })
-            navigate('/');
+            navigate('/pirates');
 
         })
         .catch(err => {

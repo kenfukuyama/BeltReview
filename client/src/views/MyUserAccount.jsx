@@ -208,32 +208,10 @@ const MyUserAccount = () => {
                                         <div className="mb-2">
                                             <label className="form-label text-white">Year</label><br />
                                             <select className='form-control' onChange={handleYearChange} defaultValue = {user.year[0] === "-1" || !user.year  ? -1 : user.year[0]}>
-                                                {/* { user.year[0] == -1 || !user.year ? 
-                                                <>
                                                     <option value="-1">Choose Your Year</option>
                                                     { yearChoices.map((year, i) => {
                                                     return <option key={i} value={i}>{year}</option>
                                                     })}
-                                                {/* <option value={-1}> No selected yet</option> */}
-                                                {/* </> : 
-                                                <>
-                                                { yearChoices.map((year, i) => {
-                                                    return <option key={i} value={i}>{year}</option>
-                                                })}
-                                                </>}   */}
-                                                
-                                                {/* { yearChoices.map((year, i) => {
-                                                    return <option key={i} value={i}>{year}</option>
-                                                })} */}
-
-
-                                                    <option value="-1">Choose Your Year</option>
-                                                    { yearChoices.map((year, i) => {
-                                                    return <option key={i} value={i}>{year}</option>
-                                                    })}
-
-
-
                                             </select>
                                         </div>
 
