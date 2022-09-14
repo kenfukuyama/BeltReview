@@ -38,7 +38,44 @@ const PirateForm = (props) => {
     const createPirate = (e) => {
         e.preventDefault();
 
-        axios.post('http://localhost:8000/api/pirates/', {
+        if ( pirate.position === "Captain") {
+            axios.get('http://localhost:8000/api/pirates/get/checkCaptain')
+            .then( res => {
+                if (res.data) {
+                    setErrorsObj({position : "Only one captain is allowed"});
+                    return;
+                }
+                else {
+                    axios.post('http://localhost:8000/api/pirates/', {
+                        name: pirate.name,
+                        imgURL: pirate.imgURL,
+                        phrase: pirate.phrase,
+                        numChests: pirate.numChests,
+                        position: pirate.position,
+                        things: pirate.things
+
+                    })
+                        .then(res => {
+                            console.log(res);
+                            setErrorsObj({});
+                            // * navigate to current creted one
+                            navigate(`/pirates/${res.data._id}`);
+
+                        })
+                        .catch(err => {
+                            console.log(err);
+                            const errResponse = err.response.data.errors;
+                            const errObj = {};
+                            for (const key in errResponse) {
+                                errObj[key] = [errResponse[key].message];
+                            }
+                            setErrorsObj(errObj);
+                        });
+                }
+            })
+
+        } else {
+            axios.post('http://localhost:8000/api/pirates/', {
             name : pirate.name, 
             imgURL : pirate.imgURL, 
             phrase : pirate.phrase, 
@@ -63,6 +100,9 @@ const PirateForm = (props) => {
                 }
                 setErrorsObj(errObj);
             });
+        }
+
+        
     }
 
     const handleChange = (e) => {

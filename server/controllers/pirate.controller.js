@@ -28,6 +28,12 @@ module.exports.createPirate = (request, response) => {
         .catch(err => response.status(400).json(err));
 }
 
+module.exports.checkForCaptains = (request, response) => {
+    Pirate.find({position : "Captain"})
+        .then(pirate => response.json(pirate))
+        .catch(err => response.json(err))
+}
+
 module.exports.getAllPirates = (request, response) => {
     Pirate.find({})
         .then(pirates => response.json(pirates))
